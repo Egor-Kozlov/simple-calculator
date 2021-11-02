@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F0F0F3;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 411px;
+    max-height: 800px;
+    align-items: flex-end;
+    border-radius: 24px;
+    background: rgba(46, 44, 44, 1);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.keyboard {
+    width: 100%;
+    height: 532px;
+    padding: 50px 27px 39px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    border-radius: 24px;
+    background: rgba(240, 240, 243, 1);
+}
+
+.button { 
+    background: #F0F0F3;
+    box-shadow: -10px -10px 24px rgba(255, 255, 255, 0.6), 10px 10px 24px rgba(174, 174, 192, 0.2);
+    border: none;
+    border-radius: 16px;
+
+    color: rgba(114, 138, 183, 1);
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button--zero {
+    grid-column: 1 / 3;
+}
+
+.button--equal {
+    color: white;
+    background: #2DD3C5;
+    box-shadow: -10px -10px 24px #FFFFFF, 10px 10px 24px rgba(174, 174, 192, 0.52);
+}
+
+.button--divide,
+.button--multiply,
+.button--minus,
+.button--plus {
+    color: #745FF2;
+}
+
+.button:nth-child(-n+3) {
+    color: #898989;
+}
+
+.display {
+    width: 100%;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 25px 33px 28px 33px;
+    color: rgb(255, 255, 255);
+}
+
+.old-result {
+    min-height: 95px;
+}
+
+.old-result__value {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 95px;
+    color: #F2F2F4;
+    opacity: 0.2;
+}
+
+.previous-expression {
+    min-height: 52px;
+}
+
+.previous-expression__value {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 53px;
+    color: rgba(114, 138, 183, 0.65);
+}
+
+.main-row__value {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 95px;
+    color: #F2F2F4;
+}

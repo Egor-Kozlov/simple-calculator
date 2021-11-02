@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Beautiful JS Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="main">
+        <div class="calculator">
+            <div class="display">
+                <div class="old-result">
+                    <span class="old-result__value"></span>
+                </div>
+                <div class="previous-expression">
+                    <span class="previous-expression__value"></span>
+                </div>
+                <div class="main-row">
+                    <span class="main-row__value">0</span>
+                </div>
+            </div>
+            <div class="keyboard">
+                <button onclick="clearField()" class="button button--delete">C</button>
+                <button class="button">±</button>
+                <button value="%" onclick="display(value)" class="button">%</button>
+                <button value="/" onclick="display(value)" class="button button--divide">/</button>
+                <button value="7" onclick="display(value)" class="button button--seven">7</button>
+                <button value="8" onclick="display(value)" class="button button--eight">8</button>
+                <button value="9" onclick="display(value)" class="button button--nine">9</button>
+                <button value="*" onclick="display(value)" class="button button--multiply">*</button>
+                <button value="4" onclick="display(value)" class="button button--four">4</button>
+                <button value="5" onclick="display(value)" class="button button-five">5</button>
+                <button value="6" onclick="display(value)" class="button button--six">6</button>
+                <button value="-" onclick="display(value)" class="button button--minus">-</button>
+                <button value="1" onclick="display(value)" class="button button--one">1</button>
+                <button value="2" onclick="display(value)" class="button button--two">2</button>
+                <button value="3" onclick="display(value)" class="button button--three">3</button>
+                <button value="+" onclick="display(value)"  class="button button--plus">+</button>
+                <button value="0" onclick="display(value)" class="button button--zero">0</button>
+                <button value="." onclick="display(value)" class="button button--dot">.</button>
+                <button value="=" onclick="evaluateValue()" class="button button--equal">=</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
